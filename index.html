@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗЕРНО — спешелти кофе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Grain texture overlay -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">ЗЕРНО</a>
+        <div class="nav-links">
+            <a href="#menu">Меню</a>
+            <a href="#about">О нас</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+        <a href="tel:+79001234567" class="nav-phone">
+            <i class="mdi mdi-phone"></i> +7 900 123-45-67
+        </a>
+        <button class="nav-burger" id="nav-burger" aria-label="Меню">
+            <i class="mdi mdi-menu"></i>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <p class="eyebrow fade-up" style="--d: 0s">
+                <i class="mdi mdi-coffee-outline"></i> Спешелти кофе · Своя обжарка
+            </p>
+            <h1 class="fade-up" style="--d: 0.1s">Кофе, который<br><em>будит город</em></h1>
+            <p class="hero-sub fade-up" style="--d: 0.2s">
+                Обжариваем зерно малыми партиями каждые выходные.<br>
+                Завариваем на воде с идеальной минерализацией.
+            </p>
+            <div class="hero-cta fade-up" style="--d: 0.3s">
+                <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+                <a href="#contacts" class="btn btn-ghost">Как нас найти</a>
+            </div>
+            <div class="hero-badges fade-up" style="--d: 0.4s">
+                <span><i class="mdi mdi-leaf"></i> 100% арабика</span>
+                <span><i class="mdi mdi-fire"></i> Обжарка каждую неделю</span>
+                <span><i class="mdi mdi-clock-outline"></i> с 8:00 до 22:00</span>
+            </div>
+        </div>
+
+        <!-- CSS Cup with steam -->
+        <div class="hero-cup" aria-hidden="true">
+            <div class="steam steam-1"></div>
+            <div class="steam steam-2"></div>
+            <div class="steam steam-3"></div>
+            <div class="cup">
+                <div class="cup-coffee"></div>
+            </div>
+            <div class="saucer"></div>
+        </div>
+
+        <div class="scroll-hint">
+            <i class="mdi mdi-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section" id="menu">
+        <div class="section-head">
+            <p class="eyebrow"><i class="mdi mdi-menu-book-outline"></i> Меню</p>
+            <h2>Что мы варим</h2>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-card fade-up" style="--d: 0s">
+                <div class="menu-icon"><i class="mdi mdi-coffee"></i></div>
+                <div class="menu-body">
+                    <div class="menu-row">
+                        <h3>Эспрессо</h3>
+                        <span class="dots"></span>
+                        <span class="price">180 ₽</span>
+                    </div>
+                    <p>Классическая порция на зерне текущей обжарки</p>
+                </div>
+            </div>
+            <div class="menu-card fade-up" style="--d: 0.05s">
+                <div class="menu-icon"><i class="mdi mdi-cup-water"></i></div>
+                <div class="menu-body">
+                    <div class="menu-row">
+                        <h3>Капучино</h3>
+                        <span class="dots"></span>
+                        <span class="price">240 ₽</span>
+                    </div>
+                    <p>Бархатная пенка, температура молока 62°</p>
+                </div>
+            </div>
+            <div class="menu-card fade-up" style="--d: 0.1s">
+                <div class="menu-icon"><i class="mdi mdi-glass-mug-variant"></i></div>
+                <div class="menu-body">
+                    <div class="menu-row">
+                        <h3>Флэт уайт</h3>
+                        <span class="dots"></span>
+                        <span class="price">260 ₽</span>
+                    </div>
+                    <p>Двойной ристретто и тонкая молочная текстура</p>
+                </div>
+            </div>
+            <div class="menu-card fade-up" style="--d: 0.15s">
+                <div class="menu-icon"><i class="mdi mdi-filter-variant"></i></div>
+                <div class="menu-body">
+                    <div class="menu-row">
+                        <h3>Фильтр V60</h3>
+                        <span class="dots"></span>
+                        <span class="price">290 ₽</span>
+                    </div>
+                    <p>Сорт недели — Эфиопия, ягодные ноты</p>
+                </div>
+            </div>
+            <div class="menu-card fade-up" style="--d: 0.2s">
+                <div class="menu-icon"><i class="mdi mdi-pot-mix-outline"></i></div>
+                <div class="menu-body">
+                    <div class="menu-row">
+                        <h3>Колд брю</h3>
+                        <span class="dots"></span>
+                        <span class="price">310 ₽</span>
+                    </div>
+                    <p>18 часов холодной экстракции, мягкий вкус</p>
+                </div>
+            </div>
+            <div class="menu-card fade-up" style="--d: 0.25s">
+                <div class="menu-icon"><i class="mdi mdi-cupcake"></i></div>
+                <div class="menu-body">
+                    <div class="menu-row">
+                        <h3>Десерт дня</h3>
+                        <span class="dots"></span>
+                        <span class="price">220 ₽</span>
+                    </div>
+                    <p>Свежая выпечка из нашей пекарни</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-about" id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="eyebrow"><i class="mdi mdi-heart-outline"></i> Философия</p>
+                <h2>Зерно — это <em>80%</em> вкуса</h2>
+                <p class="about-lead">
+                    Мы начинали как два друга с домашним ростером и одержимостью
+                    чашкой, которая не стыдно назвать идеальной.
+                </p>
+                <p>
+                    Сейчас — обжариваем малыми партиями по 12 кг, чтобы каждый пакет
+                    попадал к вам в первые 10 дней после обжарки. Никаких витринных
+                    запасов и «выгодных» объёмов.
+                </p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-num">5</span>
+                        <span class="stat-label">лет у ростера</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">14</span>
+                        <span class="stat-label">сортов в ротации</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">300+</span>
+                        <span class="stat-label">чашек в день</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual" aria-hidden="true">
+                <div class="bean bean-1"></div>
+                <div class="bean bean-2"></div>
+                <div class="bean bean-3"></div>
+                <div class="roast-ring"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section" id="reviews">
+        <div class="section-head">
+            <p class="eyebrow"><i class="mdi mdi-comment-quote-outline"></i> Отзывы</p>
+            <h2>Что говорят гости</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card fade-up" style="--d: 0s">
+                <div class="review-stars">
+                    <i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i>
+                </div>
+                <p>«Лучший флэт уайт в районе. Прихожу каждое утро перед работой — бариста уже знает мой заказ».</p>
+                <div class="review-author">
+                    <span class="review-avatar"><i class="mdi mdi-account"></i></span>
+                    <span>Анна К.</span>
+                </div>
+            </div>
+            <div class="review-card fade-up" style="--d: 0.1s">
+                <div class="review-stars">
+                    <i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i>
+                </div>
+                <p>«Взял пакет Эфиопии домой — заварил в аэропрессе, и это совершенно другой уровень. Вкус как в кофейне».</p>
+                <div class="review-author">
+                    <span class="review-avatar"><i class="mdi mdi-account"></i></span>
+                    <span>Дмитрий В.</span>
+                </div>
+            </div>
+            <div class="review-card fade-up" style="--d: 0.2s">
+                <div class="review-stars">
+                    <i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i><i class="mdi mdi-star"></i>
+                </div>
+                <p>«Атмосфера, где хочется остаться: тихая музыка, запах свежей обжарки, розетки у каждого стола».</p>
+                <div class="review-author">
+                    <span class="review-avatar"><i class="mdi mdi-account"></i></span>
+                    <span>Мария Л.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section section-contacts" id="contacts">
+        <div class="section-head">
+            <p class="eyebrow"><i class="mdi mdi-map-marker-outline"></i> Контакты</p>
+            <h2>Заходите на чашку</h2>
+        </div>
+        <div class="contacts-grid">
+            <div class="contact-card fade-up" style="--d: 0s">
+                <i class="mdi mdi-map-marker"></i>
+                <h3>Адрес</h3>
+                <p>ул. Кофейная, 7<br>вход со двора, 1-й этаж</p>
+            </div>
+            <div class="contact-card fade-up" style="--d: 0.1s">
+                <i class="mdi mdi-clock-outline"></i>
+                <h3>Часы работы</h3>
+                <p>Пн–Пт: 8:00 — 22:00<br>Сб–Вс: 9:00 — 23:00</p>
+            </div>
+            <div class="contact-card fade-up" style="--d: 0.2s">
+                <i class="mdi mdi-phone"></i>
+                <h3>Связь</h3>
+                <p>+7 900 123-45-67<br>@zerno_coffee</p>
+            </div>
+        </div>
+        <div class="contacts-cta fade-up" style="--d: 0.3s">
+            <a href="https://t.me/zerno_coffee" target="_blank" class="btn btn-primary">
+                <i class="mdi mdi-send"></i> Написать в Telegram
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <span class="footer-logo">ЗЕРНО</span>
+        <p>Свежая обжарка · Спешелти кофе · 2026</p>
+        <div class="footer-socials">
+            <a href="#" aria-label="Telegram"><i class="mdi mdi-send"></i></a>
+            <a href="#" aria-label="VK"><i class="mdi mdi-vk"></i></a>
+            <a href="#" aria-label="Instagram"><i class="mdi mdi-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
