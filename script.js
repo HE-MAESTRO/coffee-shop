@@ -2,7 +2,7 @@
 function initNavbar() {
     const navbar = document.getElementById('navbar');
     const burger = document.getElementById('nav-burger');
-    const links = document.querySelector('.nav-links');
+    const links = document.getElementById('nav-links');
 
     window.addEventListener('scroll', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -10,14 +10,43 @@ function initNavbar() {
 
     if (burger && links) {
         burger.addEventListener('click', () => {
-            links.classList.toggle('open');
+            const open = links.classList.toggle('open');
+            burger.setAttribute('aria-expanded', String(open));
         });
 
-        // Close menu on link click
         links.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => links.classList.remove('open'));
+            a.addEventListener('click', () => {
+                links.classList.remove('open');
+                burger.setAttribute('aria-expanded', 'false');
+            });
         });
     }
+}
+
+// ===== Menu tabs =====
+function initMenuTabs() {
+    const tabs = document.querySelectorAll('.menu-tab');
+    const panes = document.querySelectorAll('.menu-pane');
+
+    if (!tabs.length || !panes.length) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.tab;
+
+            tabs.forEach(t => {
+                const active = t === tab;
+                t.classList.toggle('active', active);
+                t.setAttribute('aria-selected', String(active));
+            });
+
+            panes.forEach(p => {
+                const show = p.dataset.pane === target;
+                p.hidden = !show;
+                p.classList.toggle('active', show);
+            });
+        });
+    });
 }
 
 // ===== Scroll reveal =====
@@ -53,6 +82,7 @@ function initAnchorOffset() {
 // ===== Init =====
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
+    initMenuTabs();
     initScrollReveal();
     initAnchorOffset();
 });
